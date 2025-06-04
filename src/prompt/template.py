@@ -9,8 +9,7 @@ ward_end = "</ward>"
 town_start = "<town>"
 town_end = "</town>"
 
-system_prompt = \
-f"""You are given an image of a location in Tokyo.
+system_prompt = f"""You are given an image of a location in Tokyo.
 Make observations based on:
 - Building types (residential/commercial), architectural era, density, height restrictions
 - Vegetation type and abundance (native vs planted species)

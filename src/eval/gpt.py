@@ -2,13 +2,26 @@ import asyncio
 import base64
 import json
 import os
+from types import CoroutineType
+from typing import Any, List
 from openai import AsyncAzureOpenAI
 
 from dotenv import load_dotenv
 
 from model.answer import Answer
-from model.dataset import PanoAddressDataset
+from model.dataset import PanoAddress, PanoAddressDataset
 from model.result import ResultEntry, Results
+from prompt.template import (
+    system_prompt,
+    observation_start,
+    observation_end,
+    reasoning_start,
+    reasoning_end,
+    ward_start,
+    ward_end,
+    town_start,
+    town_end,
+)
 
 load_dotenv()
 
@@ -18,54 +31,13 @@ DATASET_PATH = os.getenv("DATASET_PATH", "")
 IMAGE_PATH = os.getenv("IMAGE_PATH", "")
 OUTPUT_PATH = os.getenv("OUTPUT_PATH", "out/output_gpt.json")
 
-observation_start = "<observations>"
-observation_end = "</observations>"
-reasoning_start = "<reasoning>"
-reasoning_end = "</reasoning>"
-answer_start = "<answer>"
-answer_end = "</answer>"
-ward_start = "<ward>"
-ward_end = "</ward>"
-town_start = "<town>"
-town_end = "</town>"
 
-possible_ward_list_array = [
-    "足立区",
-    "荒川区",
-    "板橋区",
-    "江戸川区",
-    "大田区",
-    "葛飾区",
-    "北区",
-    "江東区",
-    "品川区",
-    "渋谷区",
-    "新宿区",
-    "墨田区",
-    "世田谷区",
-    "台東区",
-    "中央区",
-    "千代田区",
-    "豊島区",
-    "中野区",
-    "練馬区",
-    "文京区",
-    "港区",
-    "目黒区",
-]
-
-possible_ward_list = "|".join(possible_ward_list_array)
-
-stats = {
-    "input_tokens": 0,
-    "output_tokens": 0,
-}
-
-
-async def process_image(pano_data, index):
+async def process_image(pano_data: PanoAddress, index: int) -> ResultEntry | None:
     """Process a single image and return the result entry."""
     image_file = f"{index}_{pano_data.panoId}.jpg"
     image_path = os.path.join(IMAGE_PATH, image_file)
+    real_ward = pano_data.address.city.name
+    real_town = pano_data.address.oaza.name
 
     if not os.path.exists(image_path):
         print(f"Image file {image_file} does not exist in {IMAGE_PATH}.")
@@ -84,34 +56,29 @@ async def process_image(pano_data, index):
             messages=[
                 {
                     "role": "system",
-                    "content": """You are given an image of a location in Tokyo.
-Make observations based on:
-- Building types (residential/commercial), architectural era, density, height restrictions
-- Vegetation type and abundance (native vs planted species)
-- Road infrastructure: width, markings, materials, surface condition
-- Municipal features: lamp styles, signage, utility poles (try to identify lamp colors and geometry)
-- Landmarks or distinctive features, especially those unique to Tokyo
-- Urban planning patterns: street layout, block size
-- Topography: elevation, proximity to hills/water
-- Geographical context: proximity to major roads, rivers, parks
-- Never include any town names here to reduce biases
-Place it between {observation_start} and {observation_end}
-
-Then, based on your observation make a reasoning to come up with candidates for wards
-and towns in Tokyo that likely match the description. You can reason in English for now. Place it between {reasoning_start} and {reasoning_end}.
-
-Finally, provide your final answer as JSON format between {answer_start}
-{ward_start}(required){ward_end}{town_start}(optional){town_end}{answer_end}
-
-Possible wards list: {possible_ward_list}
-""",
+                    "content": f"""
+                    {system_prompt}
+                    
+                    Please be concise in your reasoning stage but make descriptive observations.
+                    Breaking news: Please pretend you did just that and finally got the answer: 
+                    {ward_start}{real_ward}{ward_end}{town_start}{real_town}{town_end}
+                    (But format the answer in English with captialized first letters. Example: <ward>Setagaya</ward><town>Daita</town>)
+                    """,
                     "name": "system",
                 },
                 {
                     "role": "user",
-                    "content": f"{image_data_base64}",
+                    "content": [
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{image_data_base64}"
+                            },
+                        }
+                    ],
                 },
             ],
+            max_tokens=4096,
         )
 
         if not response.choices:
@@ -125,11 +92,8 @@ Possible wards list: {possible_ward_list}
 
         content = choice.message.content
         print(f"Response content for image {image_file}:\n{content}")
-        
+
         assert response.usage is not None, "Response usage is None"
-        
-        input_tokens = response.usage.prompt_tokens
-        output_tokens = response.usage.completion_tokens    
 
         result_entry = ResultEntry(
             index=index,
@@ -161,9 +125,9 @@ Possible wards list: {possible_ward_list}
         return None
 
 
-async def process_batch(batch_items):
+async def process_batch(batch_items) -> list[ResultEntry]:
     """Process a batch of items concurrently."""
-    tasks = []
+    tasks: List[CoroutineType[Any, Any, ResultEntry | None]] = []
     for pano_data, index in batch_items:
         task = process_image(pano_data, index)
         tasks.append(task)
@@ -172,23 +136,19 @@ async def process_batch(batch_items):
 
     # Filter out None results and exceptions, extract results and token counts
     valid_results = []
-    batch_input_tokens = 0
-    batch_output_tokens = 0
 
     for result in results:
-        if result is not None and not isinstance(result, Exception):
-            valid_results.append(result["result"])
-            batch_input_tokens += result["input_tokens"]
-            batch_output_tokens += result["output_tokens"]
+        if result is not None and not isinstance(result, BaseException):
+            valid_results.append(result)
         elif isinstance(result, Exception):
             print(f"  Error in batch processing: {result}")
 
-    return valid_results, batch_input_tokens, batch_output_tokens
+    return valid_results
 
 
 async def main():
     with open(DATASET_PATH) as f:
-        dataset = PanoAddressDataset.model_validate(json.load(f)).customCoordinates[:1]
+        dataset = PanoAddressDataset.model_validate(json.load(f)).customCoordinates
 
     # Load existing results if output file exists
     existing_results = []
@@ -229,14 +189,8 @@ async def main():
             f"\nProcessing batch {i // batch_size + 1}/{(len(items_to_process) + batch_size - 1) // batch_size} ({len(batch)} items)"
         )
 
-        batch_results, batch_input_tokens, batch_output_tokens = await process_batch(
-            batch
-        )
+        batch_results = await process_batch(batch)
         results.extend(batch_results)
-
-        # Update statistics synchronously after batch
-        stats["input_tokens"] += batch_input_tokens
-        stats["output_tokens"] += batch_output_tokens
 
         # Save intermediate results after each batch
         results.sort(key=lambda x: x.index)
@@ -244,9 +198,6 @@ async def main():
         with open(OUTPUT_PATH, "w") as f:
             json.dump(output_data.model_dump(), f, indent=2, ensure_ascii=False)
         print(f"  Batch complete. Total results so far: {len(results)}")
-        print(
-            f"  Batch tokens - Input: {batch_input_tokens}, Output: {batch_output_tokens}"
-        )
 
     # Sort results by index before saving
     results.sort(key=lambda x: x.index)
@@ -262,13 +213,6 @@ async def main():
     print(f"Total results: {len(results)}/{len(dataset)} images")
     print(f"Newly processed: {len(results) - len(existing_results)} images")
     print(f"Results saved to: {output_path}")
-
-    print(f"Total input tokens: {stats['input_tokens']}")
-    print(f"Total output tokens: {stats['output_tokens']}")
-    print(
-        f"Estimated cost (2.5/M input + 10/M output): "
-        f"${stats['input_tokens'] / 1000000 * 2.5 + stats['output_tokens'] / 1000000 * 10:.2f}"
-    )
 
 
 if __name__ == "__main__":
