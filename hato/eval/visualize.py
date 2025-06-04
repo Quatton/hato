@@ -78,7 +78,7 @@ def normalize_ward_name(ward_name: str) -> str:
     return normalized.strip()
 
 
-def load_verified_results(file_path: str = "verified_output.json") -> Dict:
+def load_verified_results(file_path: str = "out/verified_output.json") -> Dict:
     """Load verified results from JSON file."""
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"Verified output file {file_path} not found!")
@@ -132,8 +132,9 @@ def plot_confusion_matrix(
     y_pred_normalized: List[str],
     ward_dict: Dict,
     output_path: str = "out/confusion_matrix.png",
+    json_output_path: str = "out/confusion_matrix.json",
 ) -> None:
-    """Plot and save confusion matrix as heatmap."""
+    """Plot and save confusion matrix as heatmap, and export data to JSON."""
     # Expect already normalized input data
 
     # Create confusion matrix with normalized labels
@@ -157,6 +158,28 @@ def plot_confusion_matrix(
 
     # Convert to percentages
     cm_percentage = cm_normalized * 100
+
+    # Export confusion matrix data to JSON
+    confusion_matrix_data = {
+        "labels": labels,
+        "raw_counts": cm_matrix.tolist(),
+        "normalized_percentages": cm_percentage.tolist(),
+        "total_samples": len(y_true_normalized),
+        "metadata": {
+            "description": "Confusion matrix for Tokyo ward prediction",
+            "format": {
+                "raw_counts": "Integer counts of predictions",
+                "normalized_percentages": "Percentage normalized by actual ward (rows sum to 100%)",
+                "labels": "Ward names in alphabetical order (both rows and columns)",
+            },
+        },
+    }
+
+    # Create output directory if it doesn't exist
+    os.makedirs(os.path.dirname(json_output_path), exist_ok=True)
+
+    with open(json_output_path, "w", encoding="utf-8") as f:
+        json.dump(confusion_matrix_data, f, indent=2, ensure_ascii=False)
 
     # Plotting
     plt.figure(figsize=(12, 10))
@@ -251,7 +274,8 @@ def main():
 
         print(f"\nGenerating confusion matrix for {len(results)} results...")
         plot_confusion_matrix(y_true_normalized, y_pred_normalized, TOKYO_WARD_DICT)
-        print("Confusion matrix saved as 'confusion_matrix.png'")
+        print("Confusion matrix saved as 'out/confusion_matrix.png'")
+        print("Confusion matrix data exported to 'out/confusion_matrix.json'")
 
         # Analyze ward prediction difficulty
         analyze_ward_difficulty(verified_data)

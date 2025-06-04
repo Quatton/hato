@@ -12,12 +12,49 @@ from hato.model.result import ResultEntry, Results
 
 load_dotenv()
 
-oai = AsyncAzureOpenAI(api_version="2025-01-01-preview")
+oai = AsyncAzureOpenAI(api_version="2025-04-01-preview")
 
 DATASET_PATH = os.getenv("DATASET_PATH")
 IMAGE_PATH = os.getenv("IMAGE_PATH")
-OUTPUT_PATH = os.getenv("OUTPUT_PATH", "out/output.json")
+OUTPUT_PATH = os.getenv("OUTPUT_PATH", "out/output_gpt.json")
 
+observation_start = "<observations>"
+observation_end = "</observations>"
+reasoning_start = "<reasoning>"
+reasoning_end = "</reasoning>"
+answer_start = "<answer>"
+answer_end = "</answer>"
+ward_start = "<ward>"
+ward_end = "</ward>"
+town_start = "<town>"
+town_end = "</town>"
+
+possible_ward_list_array = [
+    "足立区",
+    "荒川区",
+    "板橋区",
+    "江戸川区",
+    "大田区",
+    "葛飾区",
+    "北区",
+    "江東区",
+    "品川区",
+    "渋谷区",
+    "新宿区",
+    "墨田区",
+    "世田谷区",
+    "台東区",
+    "中央区",
+    "千代田区",
+    "豊島区",
+    "中野区",
+    "練馬区",
+    "文京区",
+    "港区",
+    "目黒区",
+]
+
+possible_ward_list = "|".join(possible_ward_list_array)
 
 stats = {
     "input_tokens": 0,
@@ -47,66 +84,76 @@ async def process_image(pano_data, index):
             messages=[
                 {
                     "role": "system",
-                    "content": """Analyze this Tokyo street view image and identify the location.
-
-Observe:
+                    "content": """You are given an image of a location in Tokyo.
+Make observations based on:
 - Building types (residential/commercial), architectural era, density, height restrictions
 - Vegetation type and abundance (native vs planted species)
 - Road infrastructure: width, markings, materials, surface condition
-- Municipal features: lamp styles, signage, utility poles (especially lamp colors)
+- Municipal features: lamp styles, signage, utility poles (try to identify lamp colors and geometry)
 - Landmarks or distinctive features, especially those unique to Tokyo
 - Urban planning patterns: street layout, block size
 - Topography: elevation, proximity to hills/water
 - Geographical context: proximity to major roads, rivers, parks
+- Never include any town names here to reduce biases
+Place it between {observation_start} and {observation_end}
 
-Identify the Tokyo ward and town based on these characteristics.
-Be specific and detailed in your analysis. Use strong verbs and adjectives to describe the visual elements without verbose language.
+Then, based on your observation make a reasoning to come up with candidates for wards
+and towns in Tokyo that likely match the description. You can reason in English for now. Place it between {reasoning_start} and {reasoning_end}.
 
-Response format:
-- `observation`: Key visual details only
-- `reasoning`: How these details indicate the specific location
-- `ward`: Tokyo ward name
-- `town`: Town/district name (if identifiable)
-- `confidence`: Certainty level (0-1)""",
+Finally, provide your final answer as JSON format between {answer_start}
+{ward_start}(required){ward_end}{town_start}(optional){town_end}{answer_end}
+
+Possible wards list: {possible_ward_list}
+""",
+                    "name": "system",
                 },
                 {
                     "role": "user",
-                    "content": [
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{image_data_base64}",
-                            },
-                        }
-                    ],
+                    "content": f"{image_data_base64}",
                 },
             ],
-            response_format={
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "reasoning_format",
-                    "schema": Answer.model_json_schema(),
-                },
-            },
         )
 
-        answer = Answer.model_validate_json(response.choices[0].message.content)
+        if not response.choices:
+            print(f"No choices returned for image {image_file}")
+            return None
 
-        print(f"  Ward: {answer.ward}, Town: {answer.town}")
-        print(
-            f"  Tokens - Input: {response.usage.prompt_tokens}, Output: {response.usage.completion_tokens}"
-        )
+        choice = response.choices[0]
+        if not choice.message or not choice.message.content:
+            print(f"No content in response for image {image_file}")
+            return None
 
-        return {
-            "result": ResultEntry(
-                index=index,
-                panoid=pano_data.panoId,
-                answer=answer,
-                actual_address=pano_data.address,
+        content = choice.message.content
+        print(f"Response content for image {image_file}:\n{content}")
+        input_tokens = response.usage.input_tokens
+        output_tokens = response.usage.output_tokens
+
+        result_entry = ResultEntry(
+            index=index,
+            panoId=pano_data.panoId,
+            address=pano_data.address,
+            answer=Answer(
+                raw=content,
+                observation=(
+                    content.split(observation_start)[1]
+                    .split(observation_end)[0]
+                    .strip()
+                ),
+                reasoning=(
+                    content.split(reasoning_start)[1].split(reasoning_end)[0].strip()
+                ),
+                ward=(content.split(ward_start)[1].split(ward_end)[0].strip()),
+                town=(
+                    content.split(town_start)[1].split(town_end)[0].strip()
+                    if town_start in content
+                    else None
+                ),
             ),
-            "input_tokens": response.usage.prompt_tokens,
-            "output_tokens": response.usage.completion_tokens,
-        }
+            input_tokens=input_tokens,
+            output_tokens=output_tokens,
+        )
+
+        return result_entry
 
     except Exception as e:
         print(f"  Error processing image {image_file}: {e}")
@@ -140,7 +187,7 @@ async def process_batch(batch_items):
 
 async def main():
     with open(DATASET_PATH) as f:
-        dataset = PanoAddressDataset.model_validate(json.load(f)).customCoordinates
+        dataset = PanoAddressDataset.model_validate(json.load(f)).customCoordinates[:1]
 
     # Load existing results if output file exists
     existing_results = []
