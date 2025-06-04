@@ -1,3 +1,6 @@
 [submodule "submodules/VLM_GRPO"]
 	path = submodules/VLM_GRPO
 	url = https://github.com/GAD-cell/VLM_GRPO
+[submodule "submodules/VLM-R1"]
+	path = submodules/VLM-R1
+	url = https://github.com/om-ai-lab/VLM-R1
