@@ -1,13 +1,16 @@
+#%%
 from unsloth import FastVisionModel
 import torch
 max_seq_length = 2048
 lora_rank = 8 # The example uses 32 so let's say 8
 
+#%%
 model, tokenizer = FastVisionModel.from_pretrained(
     "unsloth/Qwen2.5-VL-3B-Instruct-bnb-4bit",
     load_in_4bit = True, # Use 4bit to reduce memory use. False for 16bit LoRA.
     use_gradient_checkpointing = "unsloth", # True or "unsloth" for long context
     max_seq_length = max_seq_length,
+    
 )
 
 pmodel = FastVisionModel.get_peft_model(
@@ -25,5 +28,35 @@ pmodel = FastVisionModel.get_peft_model(
     use_rslora = False,  # We support rank stabilized LoRA
     loftq_config = None, # And LoftQ
     # target_modules = "all-linear", # Optional now! Can specify a list if needed
-    use_gradient_checkpointing = "unsloth",
+    use_gradient_checkpointing = True,
 )
+
+#%%
+from PIL import Image
+from prompt.template import system_prompt
+from transformers.generation.streamers import TextStreamer
+FastVisionModel.for_inference(model) # Enable for inference!
+
+image = Image.open("datasets/out/0_C_SxOIfPf7cF9fVPhli4fA.jpg").convert("RGB")
+
+messages = [
+    system_prompt,
+    {"role": "user", "content": [
+        {"type": "image"},
+    ]}
+]
+
+print(messages)
+
+input_text = tokenizer.apply_chat_template(messages, add_generation_prompt = True)
+inputs = tokenizer(
+    image,
+    input_text,
+    add_special_tokens = False,
+    return_tensors = "pt",
+).to("cuda")
+
+text_streamer = TextStreamer(tokenizer, skip_prompt = True)
+_ = model.generate(**inputs, streamer = text_streamer, max_new_tokens = 128,
+                   use_cache = True, temperature = 1.5, min_p = 0.1)
+# %%

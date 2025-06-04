@@ -6,16 +6,16 @@ from openai import AsyncAzureOpenAI
 
 from dotenv import load_dotenv
 
-from hato.model.answer import Answer
-from hato.model.dataset import PanoAddressDataset
-from hato.model.result import ResultEntry, Results
+from model.answer import Answer
+from model.dataset import PanoAddressDataset
+from model.result import ResultEntry, Results
 
 load_dotenv()
 
 oai = AsyncAzureOpenAI(api_version="2025-04-01-preview")
 
-DATASET_PATH = os.getenv("DATASET_PATH")
-IMAGE_PATH = os.getenv("IMAGE_PATH")
+DATASET_PATH = os.getenv("DATASET_PATH", "")
+IMAGE_PATH = os.getenv("IMAGE_PATH", "")
 OUTPUT_PATH = os.getenv("OUTPUT_PATH", "out/output_gpt.json")
 
 observation_start = "<observations>"
@@ -125,13 +125,16 @@ Possible wards list: {possible_ward_list}
 
         content = choice.message.content
         print(f"Response content for image {image_file}:\n{content}")
-        input_tokens = response.usage.input_tokens
-        output_tokens = response.usage.output_tokens
+        
+        assert response.usage is not None, "Response usage is None"
+        
+        input_tokens = response.usage.prompt_tokens
+        output_tokens = response.usage.completion_tokens    
 
         result_entry = ResultEntry(
             index=index,
-            panoId=pano_data.panoId,
-            address=pano_data.address,
+            panoid=pano_data.panoId,
+            actual_address=pano_data.address,
             answer=Answer(
                 raw=content,
                 observation=(
@@ -149,8 +152,6 @@ Possible wards list: {possible_ward_list}
                     else None
                 ),
             ),
-            input_tokens=input_tokens,
-            output_tokens=output_tokens,
         )
 
         return result_entry

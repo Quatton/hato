@@ -7,7 +7,7 @@ from pydantic import BaseModel
 
 from dotenv import load_dotenv
 
-from hato.model.result import Results, ResultEntry
+from model.result import Results, ResultEntry
 
 load_dotenv()
 

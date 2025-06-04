@@ -1,8 +1,8 @@
 from typing import List
 from pydantic import BaseModel
 
-from hato.model.answer import Answer
-from hato.model.dataset import Address
+from model.answer import Answer
+from model.dataset import Address
 
 
 class ResultEntry(BaseModel):
