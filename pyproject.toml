@@ -16,7 +16,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "torch>=2.7.0",
     "transformers==4.49.0",
-    "unsloth==2025.4.1",
+    "unsloth==2025.5.1",
     "hato",
     "vlmgrpo",
 ]

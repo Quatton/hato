@@ -2,8 +2,7 @@ import asyncio
 import base64
 import json
 import os
-from types import CoroutineType
-from typing import Any, List
+from typing import List
 from openai import AsyncAzureOpenAI
 
 from dotenv import load_dotenv
@@ -52,7 +51,7 @@ async def process_image(pano_data: PanoAddress, index: int) -> ResultEntry | Non
 
     try:
         response = await oai.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4.1",
             messages=[
                 {
                     "role": "system",
@@ -127,10 +126,11 @@ async def process_image(pano_data: PanoAddress, index: int) -> ResultEntry | Non
 
 async def process_batch(batch_items) -> list[ResultEntry]:
     """Process a batch of items concurrently."""
-    tasks: List[CoroutineType[Any, Any, ResultEntry | None]] = []
+    tasks: List[asyncio.Task] = []
     for pano_data, index in batch_items:
-        task = process_image(pano_data, index)
+        task = asyncio.create_task(process_image(pano_data, index))
         tasks.append(task)
+        await asyncio.sleep(3)
 
     results = await asyncio.gather(*tasks, return_exceptions=True)
 
@@ -181,8 +181,7 @@ async def main():
 
     print(f"New items to process: {len(items_to_process)}")
 
-    # Process items in batches of 5
-    batch_size = 10
+    batch_size = 20
     for i in range(0, len(items_to_process), batch_size):
         batch = items_to_process[i : i + batch_size]
         print(
