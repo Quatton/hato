@@ -130,7 +130,7 @@ async def process_batch(batch_items) -> list[ResultEntry]:
     for pano_data, index in batch_items:
         task = asyncio.create_task(process_image(pano_data, index))
         tasks.append(task)
-        await asyncio.sleep(3)
+        # await asyncio.sleep(3)
 
     results = await asyncio.gather(*tasks, return_exceptions=True)
 
