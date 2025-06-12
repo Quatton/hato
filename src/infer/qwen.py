@@ -41,7 +41,6 @@ if __name__ == "__main__":
 
     image = Image.open("datasets/out/0_C_SxOIfPf7cF9fVPhli4fA.jpg")
 
-
     messages = [
         {
             "role": "system",
@@ -64,8 +63,8 @@ if __name__ == "__main__":
         messages, add_generation_prompt=True, tokenize=False
     )
     inputs = tokenizer(
-        images = [image],
-        text = input_text,
+        images=[image],
+        text=input_text,
         add_special_tokens=False,
         return_tensors="pt",
     ).to("cuda")
