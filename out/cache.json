@@ -1,0 +1,2784 @@
+{
+  "世田谷区": [
+    "Setagaya",
+    "世田谷区",
+    "Suginami for Ward, 松原 for Town",
+    "Suginami Ward",
+    "Koto",
+    "Nerima",
+    "Minato",
+    "Meguro Ward",
+    "Setagaya Ward",
+    "Nakano",
+    "Shibuya",
+    "Shinjuku Ward",
+    "Nakano Ward",
+    "Minato Ward",
+    "Minato-ku",
+    "Itabashi Ward",
+    "Shinjuku区",
+    "Edogawa was input, should've matched Setagaya.",
+    "Ota Ward should have matched with 世田谷区 (Setagaya Ward)",
+    "Arakawa区",
+    "Meguro区",
+    "Suginami"
+  ],
+  "江東区": [
+    "墨田区",
+    "Setagaya",
+    "Ota",
+    "Sumida Ward",
+    "Kōtō",
+    "Nerima区",
+    "Koto",
+    "Sumida",
+    "江東区",
+    "Minato",
+    "Koto (Ward)",
+    "Kōtō-ku",
+    "Edogawa (江戸川区)",
+    "Nerima Ward",
+    "Ota is incorrectly matched with 江東区.",
+    "江戸川区",
+    "Shinagawa",
+    "Ota City (大田区)",
+    "Ota Ward",
+    "Minato City",
+    "港区",
+    "Koto Ward",
+    "Adachi"
+  ],
+  "大田区": [
+    "ōta Ward",
+    "Bunkyo",
+    "Setagaya区",
+    "Ōta-ku",
+    "Setagaya",
+    "other areas or referential discrepancies should have matched with predictions like 'Ōta' for ward areas",
+    "Ota",
+    "Toshima (豊島区)",
+    "Kōtō",
+    "Koto",
+    "Nerima",
+    "Minato",
+    "Katsushika-ku",
+    "Katsushika",
+    "Meguro Ward",
+    "Otaku",
+    "Ōta Ward",
+    "Ota,",
+    "Edogawa",
+    "Shinagawa",
+    "ōta",
+    "大田区",
+    "Ota Ward",
+    "Nerima Ward is predicted, but actual is Ota Ward.",
+    "Kita",
+    "Ōta (大田区)",
+    "Ōta",
+    "Ōta (ward)",
+    "Koto Ward",
+    "Arakawa",
+    "Edogawa-ku",
+    "Adachi"
+  ],
+  "足立区": [
+    "Setagaya City",
+    "Koto Ward if 足立区 matched Koto",
+    "Adachi-ku",
+    "Setagaya",
+    "Koto",
+    "Nerima",
+    "Sumida",
+    "Edogawa",
+    "Ota",
+    "Kita",
+    "N/A",
+    "Koto Ward",
+    "Katsushika",
+    "足立区",
+    "Adachi",
+    "Adachi Ward"
+  ],
+  "練馬区": [
+    "Itabashi",
+    "Setagaya区",
+    "Chiyoda Ward would have matched 練馬区 if the prediction was more in line with Nerima Ward.",
+    "Setagaya",
+    "練馬区",
+    "Musashino ward does not exist in Tokyo; likely would have matched with 武蔵野市 (Musashino City).",
+    "Nerima",
+    "Edogawa",
+    "Nerima-ku",
+    "Shibuya区",
+    "Katsushika",
+    "Toshima Ward",
+    "練馬",
+    "Nerima Ward",
+    "Adachi",
+    "Suginami"
+  ],
+  "千代田区": [
+    "Shinjuku-ku",
+    "Shinagawa",
+    "Setagaya",
+    "Minato",
+    "Chiyoda",
+    "Minato Ward",
+    "Shinjuku Ward"
+  ],
+  "石神井町": [
+    "石神井町",
+    "Near Shakuji",
+    "Shakujii-Machi"
+  ],
+  "江戸川区": [
+    "Setagaya",
+    "Katsushika Ward",
+    "Ota (if the actual data were Ota)",
+    "Sumida Ward",
+    "NERIMA区",
+    "Suginami Ward",
+    "Koto",
+    "Katsushika",
+    "Sumida",
+    "Setagaya Ward",
+    "Edogawa Ward",
+    "Toshima",
+    "Edogawa",
+    "Adachi Ward",
+    "江戸川区",
+    "Itabashi Ward",
+    "Ota Ward should have been Edogawa Ward.",
+    "Ota Ward",
+    "Koto Ward",
+    "Edogawa-ku",
+    "Bunkyo (文京区)",
+    "Adachi"
+  ],
+  "中野区": [
+    "Toshima",
+    "Shinagawa",
+    "Setagaya",
+    "Nerima-ku",
+    "Nakano Ward",
+    "Nakano",
+    "Shibuya Ward",
+    "Meguro",
+    "Nakano-ku",
+    "Shinjuku-ku",
+    "中野区"
+  ],
+  "板橋区": [
+    "Toshima-ku",
+    "Setagaya",
+    "板橋区 (Itabashi Ward)",
+    "Suginami Ward",
+    "Koto",
+    "Katsushika",
+    "Sumida",
+    "Nakano",
+    "Shibuya",
+    "Toshima",
+    "板橋区",
+    "Setagaya would have matched with 世田谷区",
+    "Nerima Ward",
+    "Bunkyo would match 文京区",
+    "Itabashi",
+    "Itabashi Ward",
+    "Shinjuku",
+    "Arakawa",
+    "Toshima Ward",
+    "Kita (ward)"
+  ],
+  "新宿区": [
+    "Nerima区",
+    "Toshima",
+    "Setagaya区",
+    "Setagaya",
+    "Chiyoda (千代田区)",
+    "Sumida",
+    "Minato",
+    "Shinjuku",
+    "Nakano",
+    "Arakawa",
+    "Shinjuku Ward",
+    "Sumida City (Ward)"
+  ],
+  "墨田区": [
+    "Edogawa Ward",
+    "墨田 (Sumida)",
+    "Toshima",
+    "墨田区",
+    "Taito",
+    "Koto-ku",
+    "Sumida",
+    "Minato",
+    "Shinjuku",
+    "Shibuya Ward",
+    "Arakawa区",
+    "Arakawa (荒川区)",
+    "Chiyoda",
+    "Sumida Ward",
+    "Suginami"
+  ],
+  "杉並区": [
+    "Suginami-ku",
+    "Setagaya区",
+    "Meguro would have matched with Suginami.",
+    "Shinanogawa Ward",
+    "Setagaya",
+    "Ota",
+    "杉並区",
+    "Setagaya Ward should match with ごめんなさい,杉並 (for ward).",
+    "Sumida Ward",
+    "世田谷区",
+    "Suginami Ward",
+    "Nerima",
+    "Sumida",
+    "Katsushika",
+    "Setagaya Ward",
+    "Setagaya Ward corresponds strictly to the 星谷区, not 杉並区.",
+    "Shinjuku Ward",
+    "Setagaya Ward (世田谷区)",
+    "Nerima Ward would’ve matched with Nerima区.",
+    "Setagaya Ward / 世田谷区",
+    "Setagaya (for Ward)",
+    "Edogawa",
+    "Nakano Ward",
+    "Minato Ward",
+    "Setagaya 区",
+    "Minato-ku",
+    "Itabashi",
+    "杉並",
+    "Kita Ward should have matched with '杉並区' (Suginami Ward).",
+    "Shinjuku",
+    "Suginami"
+  ],
+  "成田東": [
+    "Narita Higashi",
+    "Narita-higashi",
+    "成田東"
+  ],
+  "葛飾区": [
+    "Adachi 区",
+    "Setagaya",
+    "Ota",
+    "Adachi 区 would match 葛飾区 if it were 葛飾区",
+    "Nerima Ward should have matched 葛飾区.",
+    "Arakawa 区",
+    "Katsushika",
+    "Sumida",
+    "Shibuya",
+    "Ota Ward would have matched with prediction 葛飾区",
+    "Edogawa Ward",
+    "Toshima",
+    "Katsushika Ward (葛飾区)",
+    "Edogawa",
+    "葛飾区",
+    "Setagaya (世田谷区)",
+    "Itabashi Ward",
+    "Ōta Ward (大田区)",
+    "Shinjuku",
+    "Arakawa",
+    "Edogawa-ku",
+    "Edogawa Ward is incorrect for the actual 葛飾区. It would match if predicted 葛飾区.",
+    "Adachi",
+    "Suginami"
+  ],
+  "港区": [
+    "Minato",
+    "港区",
+    "Setagaya",
+    "Minato-ku"
+  ],
+  "台場": [
+    "Odaiba",
+    "Daiba"
+  ],
+  "台東区": [
+    "台東区",
+    "Nakano Ward or equivalent",
+    "Bunkyo",
+    "Taito Ward",
+    "Taito",
+    "Minato Ward should have matched with 台東区 for matching wards.",
+    "Koto",
+    "Chuo",
+    "Sumida",
+    "Taito-ku",
+    "Minato",
+    "Bunkyo Ward",
+    "Katsushika",
+    "Meguro区",
+    "Chiyoda",
+    "Shinjuku Ward",
+    "Sumida Ward"
+  ],
+  "橋場": [
+    "Hashiba",
+    "Kameari"
+  ],
+  "喜多見": [
+    "Kamikitazawa",
+    "Kitami",
+    "Kinuta"
+  ],
+  "東六月町": [
+    "Higashi Rokugatsu Chou"
+  ],
+  "本町": [
+    "Sendagaya",
+    "Komaba",
+    "Hatagaya",
+    "Ikebukuro",
+    "Yoyogi",
+    "Shimokitazawa",
+    "本町",
+    "中野本町",
+    "Nakano"
+  ],
+  "阿佐谷南": [
+    "阿佐谷南",
+    "A referencias point Nawate that match, but should match to Questioned into 阿佐谷南 or similar directions."
+  ],
+  "駒沢": [
+    "Komazawa",
+    "Shimokitazawa",
+    "Kyodo"
+  ],
+  "文京区": [
+    "Minato (ward)",
+    "Toshima",
+    "Bunkyo",
+    "Setagaya区",
+    "Bunkyō or 文京区",
+    "Setagaya",
+    "Shinjuku",
+    "Minato",
+    "Bunkyo Ward",
+    "Nakano",
+    "Bunkyō",
+    "Shibuya",
+    "Minato Ward",
+    "文京区"
+  ],
+  "豊洲": [
+    "Toyo Town",
+    "Toyosu",
+    "Toyocho",
+    "豊洲"
+  ],
+  "堀之内": [
+    "Horinouchi",
+    "Hireno"
+  ],
+  "本駒込": [
+    "Honkomagome"
+  ],
+  "松江": [
+    "Matsue",
+    "Minamikasai",
+    "Kameido",
+    "Kamata (if the actual data were Kamata or nearby areas)",
+    "Takenotsuka"
+  ],
+  "代田": [
+    "Kitazawa",
+    "Shimokitazawa",
+    "Daita",
+    "代田"
+  ],
+  "渋谷区": [
+    "Toshima",
+    "渋谷区",
+    "Bunkyo",
+    "Setagaya",
+    "Minato Ward would have matched with 港区",
+    "Minato",
+    "Toshima 区",
+    "Shibuya Ward",
+    "Shibuya"
+  ],
+  "千駄ヶ谷": [
+    "Todoroki",
+    "Sendagaya",
+    "Koishikawa",
+    "千駄ヶ谷"
+  ],
+  "南麻布": [
+    "Minami-Azabu",
+    "Azabu"
+  ],
+  "荒川区": [
+    "Koto-ku",
+    "Arakawa",
+    "Arakawa-ku",
+    "荒川区",
+    "Koto 区 should have matched with Arakawa 区"
+  ],
+  "南千住": [
+    "Minamisenju",
+    "南千住",
+    "Ariake"
+  ],
+  "南台": [
+    "Ikebukuro",
+    "Minamidai"
+  ],
+  "北区": [
+    "Setagaya区",
+    "Setagaya",
+    "Kita Ward",
+    "Kita-ku",
+    "Kitaku",
+    "Koto",
+    "Sumida",
+    "Setagaya Ward",
+    "Predicted ward would have matched with 北区 (Kita Ward if romanized).",
+    "Meguro",
+    "Shibuya",
+    "Itabashi区",
+    "Nakano Borough (区)",
+    "Edogawa Ward",
+    "Edogawa",
+    "Kita-Ku",
+    "Nakano City Ward",
+    "Adachi Ward",
+    "Itabashi",
+    "Shinagawa",
+    "Setagaya Ward (for Ward)",
+    "Shinjuku",
+    "Kita",
+    "北区",
+    "Adachi"
+  ],
+  "神谷": [
+    "Jingumae",
+    "Kamiya"
+  ],
+  "西糀谷": [
+    "Nishikojiya",
+    "Ochanomizu",
+    "Nishikōjiya",
+    "Nishi-Kojiya"
+  ],
+  "上池台": [
+    "Kamikedai",
+    "Kamikitadai (上池台)"
+  ],
+  "堀船": [
+    "堀船",
+    "Horifune",
+    "Sekicho"
+  ],
+  "東海": [
+    "Tokai",
+    "Toukai",
+    "Ariake",
+    "Omori or adjacent industrial districts",
+    "Haneda or adjacent industrial area"
+  ],
+  "上用賀": [
+    "Kamiyouga",
+    "Shimokitazawa",
+    "Kamiyoga",
+    "Kamiyama",
+    "Kaminoge"
+  ],
+  "久我山": [
+    "久我山",
+    "Kugayama",
+    "Roka / Kamisoshigaya Area"
+  ],
+  "荒川": [
+    "Arakawa"
+  ],
+  "北砂": [
+    "北砂",
+    "Kitasuna",
+    "Kita-Suna"
+  ],
+  "堀ノ内": [
+    "Horinouchi",
+    "Kanamachi",
+    "堀ノ内"
+  ],
+  "外神田": [
+    "Gotanda"
+  ],
+  "入谷": [
+    "Iriya"
+  ],
+  "小菅": [
+    "Kinuta or surrounding neighborhoods",
+    "小菅",
+    "金町"
+  ],
+  "南田中": [
+    "Kitazawa",
+    "Sakuragaoka",
+    "南田中",
+    "Oizumi"
+  ],
+  "西瑞江": [
+    "Shibamata",
+    "Nishi-Mizue",
+    "Otsuka"
+  ],
+  "立石": [
+    "Tateishi",
+    "Shakujiidai should have matched 立石."
+  ],
+  "大山東町": [
+    "大山東町"
+  ],
+  "代々木神園町": [
+    "Yoyogi-Kamizonocho",
+    "Yoyogi"
+  ],
+  "品川区": [
+    "品川区",
+    "Arakawa Ward",
+    "Shinagawa",
+    "Suginami Ward",
+    "Setagaya区",
+    "Setagaya",
+    "Koto",
+    "Sumida",
+    "Edogawa",
+    "Minato",
+    "Minato (for Ward)",
+    "港区",
+    "Koto Ward",
+    "Setagaya Ward",
+    "Meguro",
+    "Ōta",
+    "Adachi"
+  ],
+  "東大井": [
+    "Higashi-oi",
+    "Sangenjaya",
+    "Shibaura (for Town)",
+    "Higashi-Oi",
+    "Arakawa Town"
+  ],
+  "芝公園": [
+    "浜松町",
+    "Shiba Koen",
+    "Shiba Park"
+  ],
+  "豊島区": [
+    "Toshima",
+    "Shinjuku-ku",
+    "Bunkyo",
+    "Sumida Ward (墨田区)",
+    "Setagaya",
+    "Shinjuku Ward would match with 新宿区.",
+    "Nerima",
+    "Shinjuku",
+    "Chiyoda",
+    "豊島区",
+    "Shibuya",
+    "Minato Ward",
+    "Minato Ward would have matched with Minato-ku.",
+    "Suginami"
+  ],
+  "西池袋": [
+    "Ikebukuro",
+    "Nishi-Ikebukuro",
+    "Nishi-Shinjuku would match with 西新宿.",
+    "Shinjuku Nishiguchi"
+  ],
+  "高井戸東": [
+    "Takaido Azuma",
+    "高井戸東",
+    "Ogikubo",
+    "Kamiyama/Ikejiri",
+    "Ōizumi"
+  ],
+  "矢口": [
+    "Yaguchi",
+    "Nezu"
+  ],
+  "東墨田": [
+    "Higashisumida"
+  ],
+  "上鷺宮": [
+    "Kami-Saginomiya",
+    "上鷺宮",
+    "Kamiasagimiya",
+    "Kamisasaki",
+    "Kamisasagi-no-miya"
+  ],
+  "赤羽南": [
+    "Nakano Town (Nakano)",
+    "Tokiwadai町"
+  ],
+  "中央区": [
+    "Chuo Ward",
+    "Chūō",
+    "Minato-ku",
+    "Chuo",
+    "Sumida",
+    "Minato",
+    "Shinjuku",
+    "Koto Ward",
+    "Chūō-ku",
+    "Shinjuku Ward",
+    "Sumida Ward",
+    "中央区"
+  ],
+  "晴海": [
+    "Ariake",
+    "Harumi"
+  ],
+  "本天沼": [
+    "Setagaya Ward",
+    "Hon-Amanuma",
+    "本天沼",
+    "Shimokitazawa"
+  ],
+  "北大塚": [
+    "Kitaotsuka"
+  ],
+  "高島平": [
+    "Takashimadaira",
+    "Shiohama"
+  ],
+  "高輪": [
+    "Takanawa"
+  ],
+  "鎌田": [
+    "Kaminoge",
+    "Kamata",
+    "Kamata (near Tama River)"
+  ],
+  "三軒茶屋": [
+    "Sangenjaya"
+  ],
+  "早宮": [
+    "Kitazawa"
+  ],
+  "春日町": [
+    "Kasugacho",
+    "Kasuga-cho",
+    "Shakujiidai",
+    "Oizumi"
+  ],
+  "南荻窪": [
+    "Kitazawa",
+    "Kamiyama",
+    "Sakura-shinmachi"
+  ],
+  "平井": [
+    "Hirai"
+  ],
+  "川口市": [
+    "Edogawa Ward",
+    "Edogawa (Predicted) would match with '川口市' if it referred to Edogawa.",
+    "Edogawa区",
+    "Kawaguchi",
+    "Sumida",
+    "Ota",
+    "Ōta",
+    "Sumida Ward",
+    "Ota Ward (大田区)"
+  ],
+  "舟戸町": [
+    "Kasai"
+  ],
+  "恵比寿南": [
+    "Ebisu Minami",
+    "Shibuya"
+  ],
+  "豊玉上": [
+    "Minami-Otsuka"
+  ],
+  "奥戸": [
+    "Kasai",
+    "奥戸"
+  ],
+  "中葛西": [
+    "Senju",
+    "Nakakasai"
+  ],
+  "大森北": [
+    "Oomori Kita",
+    "Omori Kita",
+    "Ōmori-kita",
+    "Omori"
+  ],
+  "城南島": [
+    "Jonanjima"
+  ],
+  "港南": [
+    "Shiodome",
+    "Tamachi",
+    "Konan"
+  ],
+  "栗原": [
+    "Kurihara",
+    "Shimokitazawa"
+  ],
+  "大島": [
+    "Ōjima",
+    "大島",
+    "Ojima"
+  ],
+  "八潮": [
+    "Ariake",
+    "Kiba Town",
+    "Minami-Oi",
+    "Osaki",
+    "Yashio",
+    "Haneda",
+    "Near Ōta's Haneda area for Tenkubashi fallback.",
+    "八潮",
+    "Senju",
+    "Yashio or surrounding town in Shinagawa"
+  ],
+  "木場": [
+    "Kiba"
+  ],
+  "堀切": [
+    "Horie (堀切), or any specification in Katsushika Ward",
+    "Horikiri",
+    "Sangenjaya",
+    "堀切",
+    "Kamata",
+    "Mukojima"
+  ],
+  "宇奈根": [
+    "No match exists for Unane with Kamiyama.",
+    "Okusawa",
+    "宇奈根",
+    "Unane"
+  ],
+  "和泉": [
+    "Izumi",
+    "Sangenjaya",
+    "Suginami Ward",
+    "Shimokitazawa",
+    "Haneda area"
+  ],
+  "横川": [
+    "Yokogawa",
+    "none"
+  ],
+  "目黒区": [
+    "目黒区",
+    "Suginami Ward",
+    "Setagaya区",
+    "Setagaya",
+    "Setagaya Ward would correspond to 世田谷区, not 目黒区.",
+    "Minato",
+    "Shinjuku",
+    "Meguro Ward",
+    "Nakano",
+    "Meguro",
+    "Suginami"
+  ],
+  "中央町": [
+    "Okubo",
+    "Meguro",
+    "Chuo"
+  ],
+  "新木場": [
+    "Shinkiba",
+    "Shin-Kiba",
+    "Kamata is incorrectly matched with 新木場.",
+    "Toyosu",
+    "新木場"
+  ],
+  "小島": [
+    "Kinshicho"
+  ],
+  "関原": [
+    "Sekihara",
+    "Shibamata"
+  ],
+  "井草": [
+    "Kitazawa",
+    "Ikejiri",
+    "Igusa",
+    "Shimokitazawa",
+    "Nakano"
+  ],
+  "西新井": [
+    "Kitazawa",
+    "Nishi-Arai",
+    "Mukojima"
+  ],
+  "亀戸": [
+    "Kameido"
+  ],
+  "南烏山": [
+    "Minami-Karasuyama",
+    "Ogikubo",
+    "Narimasu-nearby area",
+    "Minami-karasuyama",
+    "Chitosedai",
+    "Minamikarasuyama"
+  ],
+  "千早": [
+    "Chihaya"
+  ],
+  "大山町": [
+    "Okubo"
+  ],
+  "白金": [
+    "Shirokane",
+    "Takanawa"
+  ],
+  "西蒲田": [
+    "Toyosu",
+    "Nishi-Kamata",
+    "Naka-Meguro"
+  ],
+  "雑司が谷": [
+    "Zoshigaya"
+  ],
+  "小石川": [
+    "Koishikawa"
+  ],
+  "領家": [
+    "Omori",
+    "Not specified (Predicted) would match with 領家 (if specified).",
+    "Omori (大森)"
+  ],
+  "月島": [
+    "Shiodome"
+  ],
+  "西葛西": [
+    "Nishikasai",
+    "Nishi-Kasai",
+    "Hanahata"
+  ],
+  "千駄木": [
+    "千駄木",
+    "Komazawa",
+    "Ikebukuro",
+    "Shin-Nakano"
+  ],
+  "富ヶ谷": [
+    "Azabu Area would have matched with 麻布",
+    "Tomigaya"
+  ],
+  "東綾瀬": [
+    "Higashi Ayase",
+    "東綾瀬"
+  ],
+  "下丸子": [
+    "No prediction provided for town, therefore unable to suggest one.",
+    "Koiwa",
+    "Shimomaruko",
+    "Osaki",
+    "Akabane"
+  ],
+  "高田馬場": [
+    "Takadanobaba, known as 高田馬場",
+    "Ichigaya",
+    "Takadanobaba"
+  ],
+  "赤塚": [
+    "Akatsuka"
+  ],
+  "鷺宮": [
+    "Saginomiya",
+    "中野区鷺宮",
+    "Shimokitazawa"
+  ],
+  "荻窪": [
+    "Ogikubo",
+    "荻窪",
+    "Futakotamagawa technically resides within Setagaya Ward. A more accurate match for Suginami Ward might be areas like Koenji or Ogikubo.",
+    "Shimokitazawa"
+  ],
+  "成城": [
+    "Futako-Tamagawa (二子玉川)",
+    "Seijo",
+    "Ojima",
+    "Kinuta"
+  ],
+  "荏原": [
+    "Not applicable"
+  ],
+  "板橋": [
+    "Itabashi",
+    "Igusa"
+  ],
+  "谷在家": [
+    "Yazaike",
+    "Adachi",
+    "Oizumi"
+  ],
+  "滝野川": [
+    "Takinohara",
+    "Takinogawa"
+  ],
+  "上石神井": [
+    "Nerima"
+  ],
+  "下落合": [
+    "Shimoochiai",
+    "Ikebukuro",
+    "Shimo-Ochiai",
+    "Araiyakushi"
+  ],
+  "西台": [
+    "西台",
+    "Nishidai"
+  ],
+  "神南": [
+    "Azabu"
+  ],
+  "西新小岩": [
+    "Nishi-Shinkoiwa",
+    "西新小岩",
+    "Nishishinkoiwa"
+  ],
+  "松原": [
+    "Ogikubo is within Suginami, 松原 is within Setagaya",
+    "松原",
+    "Okusawa",
+    "Kyodo"
+  ],
+  "下石神井": [
+    "Shimo-shakujii",
+    "Shimo-Shakujii"
+  ],
+  "江戸川": [
+    "Edogawa Ward",
+    "Kiba",
+    "Kitazawa",
+    "Edogawa town",
+    "Shibamata",
+    "Edogawa"
+  ],
+  "越中島": [
+    "Mukōjima Town"
+  ],
+  "本一色": [
+    "Kitazawa",
+    "Motoisshiki"
+  ],
+  "竹の塚": [
+    "Takenotsuka"
+  ],
+  "西ケ原": [
+    "Nishigahara",
+    "Kamiyama",
+    "Shimokitazawa (for Town)",
+    "Nishi-Kahara"
+  ],
+  "西五反田": [
+    "芝浦",
+    "Shirokane or Takanawa",
+    "Gotanda",
+    "西五反田",
+    "Nishigotanda"
+  ],
+  "上高田": [
+    "Nakano",
+    "Kamikitazawa",
+    "Kamitakada",
+    "Kyodo"
+  ],
+  "田園調布": [
+    "Den'en-Chōfu",
+    "Den-en-chōfu",
+    "Denenchofu",
+    "Sakura-shinmachi",
+    "Den-en-chofu",
+    "Ikegami"
+  ],
+  "小豆沢": [
+    "Azusawa"
+  ],
+  "上池袋": [
+    "Ikebukuro",
+    "Takanawa would have matched with areas within Minato such as Takanawa.",
+    "Kami-Ikebukuro"
+  ],
+  "鵜の木": [
+    "Unoki"
+  ],
+  "枝川": [
+    "Toshimaen"
+  ],
+  "中丸町": [
+    "Nakamarucho",
+    "中丸町"
+  ],
+  "若宮": [
+    "Nakano Ward",
+    "若宮",
+    "Wakamiya"
+  ],
+  "南町": [
+    "南町"
+  ],
+  "初台": [
+    "Hatsudai"
+  ],
+  "赤羽西": [
+    "Akabane-Nishi",
+    "Akabane West",
+    "赤羽西"
+  ],
+  "高円寺南": [
+    "Shiba",
+    "Seijo",
+    "A closer match for 高円寺南 would be Koenji if possible.",
+    "高円寺南",
+    "Koenji Minami"
+  ],
+  "目白台": [
+    "Kamikitazawa",
+    "Komazawa area"
+  ],
+  "島根": [
+    "Adachi Ward and 'Shimane' area",
+    "Shimane"
+  ],
+  "上井草": [
+    "Kamiigusa",
+    "Shimokitazawa / 下北沢",
+    "Kinshicho"
+  ],
+  "豊玉南": [
+    "Sagisi would likely have matched better with Toyotama",
+    "豊玉南"
+  ],
+  "祖師谷": [
+    "Kitazawa",
+    "Futakotamagawa",
+    "Soshigaya"
+  ],
+  "西原": [
+    "Nishihara",
+    "Daikanyama"
+  ],
+  "中村": [
+    "Nakamura",
+    "中村"
+  ],
+  "南砂": [
+    "葛西",
+    "Shakujiidai",
+    "Minami-suna",
+    "Minamisuna",
+    "Minami-Suna",
+    "Not specified"
+  ],
+  "南小岩": [
+    "Minami-Koiwa",
+    "Minamikoiwa"
+  ],
+  "南長崎": [
+    "Minaminagasaki",
+    "南長崎",
+    "Shakujiidai"
+  ],
+  "田端": [
+    "田端"
+  ],
+  "赤羽北": [
+    "Nakakasai"
+  ],
+  "森下": [
+    "Morishita"
+  ],
+  "西篠崎": [
+    "Nishishinozaki"
+  ],
+  "東陽": [
+    "Toyo",
+    "Tōyō",
+    "Koto, Toyo",
+    "Toyo (7-chome)",
+    "Kinshicho"
+  ],
+  "日本橋蛎殻町": [
+    "Minato",
+    "Kinshicho"
+  ],
+  "千住仲町": [
+    "Senju Nakacho"
+  ],
+  "三好": [
+    "Miyoshi"
+  ],
+  "瀬田": [
+    "Seta"
+  ],
+  "下井草": [
+    "Shimoigusa",
+    "Shakuji Town would’ve matched with Shakuji (possibly 北町付近 area in 練馬区)."
+  ],
+  "南馬込": [
+    "町田",
+    "Minamimagome",
+    "Kinuta"
+  ],
+  "上原": [
+    "Uehara"
+  ],
+  "青井": [
+    "Aoi"
+  ],
+  "上野": [
+    "Toranomon"
+  ],
+  "芝浦": [
+    "Shibaura"
+  ],
+  "代々木": [
+    "Yoyogi",
+    "Shibuya"
+  ],
+  "宮前": [
+    "near Komazawa",
+    "Okamoto",
+    "Miyamae"
+  ],
+  "中野": [
+    "Arai",
+    "中野"
+  ],
+  "東小松川": [
+    "東小松川",
+    "Higashi-Komatsugawa",
+    "Higashi Komatsugawa",
+    "Higashikomatugawa"
+  ],
+  "海の森": [
+    "Nagisa (行船公園)",
+    "Ariake"
+  ],
+  "上祖師谷": [
+    "Kitazawa",
+    "Setagaya",
+    "上祖師谷",
+    "Kamisoshigaya",
+    "Kinuta"
+  ],
+  "代沢": [
+    "代沢",
+    "Daizawa",
+    "near Seijo area",
+    "Koenji"
+  ],
+  "玉川": [
+    "Tamagawa",
+    "Shibaura"
+  ],
+  "南雪谷": [
+    "Kasai",
+    "Yukigaya"
+  ],
+  "奥沢": [
+    "Komazawa",
+    "Okusawa"
+  ],
+  "下高井戸": [
+    "Shimotakaido",
+    "A district or town in Minato Ward",
+    "Shimo-takaido"
+  ],
+  "千住中居町": [
+    "千住中居町",
+    "Senju-Nakayacho"
+  ],
+  "桜丘": [
+    "Kitami",
+    "Sakuragaoka",
+    "Kinuta"
+  ],
+  "保塚町": [
+    "Hozuka-cho"
+  ],
+  "多摩川": [
+    "Tamagawa",
+    "Shinozaki"
+  ],
+  "東新町": [
+    "Higashishinmachi",
+    "Ikebukuro",
+    "東新町",
+    "Higashi-shinmachi",
+    "Toshincho"
+  ],
+  "桜上水": [
+    "Kitazawa",
+    "Sakurajosui"
+  ],
+  "千住宮元町": [
+    "Senju Miyamotocho"
+  ],
+  "元郷": [
+    "Koiwa",
+    "Ōmori"
+  ],
+  "経堂": [
+    "Minato-ku, Akasaka",
+    "Kyodo",
+    "世田谷区の下北沢"
+  ],
+  "神山町": [
+    "Kamiyamacho"
+  ],
+  "南青山": [
+    "Akasaka",
+    "Minami Aoyama",
+    "Minami-Aoyama"
+  ],
+  "瑞江": [
+    "Mizue",
+    "Narihira",
+    "Toyo"
+  ],
+  "弦巻": [
+    "Tsurumaki",
+    "Komazawa",
+    "Jiyugaoka",
+    "Kamiyama",
+    "Kyodo"
+  ],
+  "東立石": [
+    "Minamisenju",
+    "Higashi Tateishi",
+    "Tateishi",
+    "Machiya"
+  ],
+  "新蒲田": [
+    "Shinkamata"
+  ],
+  "東葛西": [
+    "Higashi-Kasai"
+  ],
+  "前野町": [
+    "Maenocho",
+    "Ikebukuro Town",
+    "前野町",
+    "Maenochō"
+  ],
+  "五本木": [
+    "五本木 does not correspond to Setagaya Ward towns. It is part of 目黒区."
+  ],
+  "中村南": [
+    "Nakamuraminami",
+    "中村南",
+    "Nakamura"
+  ],
+  "西新宿": [
+    "Shinjuku West",
+    "Nishi-Shinjuku",
+    "Azabu",
+    "Nishishinjuku"
+  ],
+  "四谷": [
+    "Kanda-Surugadai (神田駿河台)"
+  ],
+  "有明": [
+    "Ariake",
+    "汐留",
+    "Shibaura",
+    "Shin-Kiba",
+    "Toyosu",
+    "Senju",
+    "Aomi"
+  ],
+  "川崎市高津区": [
+    "No match exists for Kawasakishi Takatsu-ku.",
+    "Takasatsu-ku, Kawasaki City",
+    "Kawasaki City Takatsu Ward",
+    "川崎市高津区",
+    "Kawasaki City, Takatsu Ward"
+  ],
+  "新井": [
+    "Kitazawa",
+    "Arai",
+    "Nerima"
+  ],
+  "丸山": [
+    "Minami-Oi",
+    "Maruyama"
+  ],
+  "篠崎町": [
+    "Shinozaki"
+  ],
+  "鹿骨": [
+    "Shishibone",
+    "Kitazawa",
+    "Shikabone",
+    "Shimokitazawa"
+  ],
+  "大森本町": [
+    "Ōmori Honchō"
+  ],
+  "雷門": [
+    "Nihonbashi",
+    "Kaminarimon",
+    "Shimbashi should have matched with 雷門 for town-level comparison."
+  ],
+  "霞が関": [
+    "Kasumigaseki"
+  ],
+  "用賀": [
+    "Sangen-Jaya",
+    "Yoga"
+  ],
+  "四つ木": [
+    "Nishi-Kamata (西蒲田)",
+    "四つ木",
+    "Takenotsuka"
+  ],
+  "梅田": [
+    "Kiba",
+    "Umeda"
+  ],
+  "豊島": [
+    "豊島",
+    "Kasai",
+    "Toshima",
+    "Koiwa"
+  ],
+  "永福": [
+    "Kitazawa",
+    "Eifuku",
+    "永福"
+  ],
+  "等々力": [
+    "Todoroki"
+  ],
+  "日本堤": [
+    "Kanda"
+  ],
+  "桜新町": [
+    "Sakurashinmachi"
+  ],
+  "常盤台": [
+    "Tokiwadai"
+  ],
+  "仲六郷": [
+    "null",
+    "Shinonome"
+  ],
+  "大和町": [
+    "大和町",
+    "Yamatocho",
+    "Itabashi-ku, Yamatocho"
+  ],
+  "錦糸": [
+    "錦糸"
+  ],
+  "小茂根": [
+    "Komone",
+    "小茂根"
+  ],
+  "上石神井南町": [
+    "Kamishakujii Minami-cho",
+    "Soshigaya"
+  ],
+  "山王": [
+    "Sannō",
+    "Futakotamagawa"
+  ],
+  "本木": [
+    "Mochi"
+  ],
+  "神田和泉町": [
+    "Kanda Izumi-cho"
+  ],
+  "野沢": [
+    "Nozawa",
+    "Mishuku"
+  ],
+  "高円寺北": [
+    "Koenji Kita"
+  ],
+  "大塚": [
+    "Ōtsuka or 大塚",
+    "Okubo",
+    "Kamikitazawa",
+    "Hatagaya",
+    "文京区 小石川"
+  ],
+  "千束": [
+    "Senzoku",
+    "Kabukicho"
+  ],
+  "下目黒": [
+    "Meguro",
+    "Shimo-meguro",
+    "Shimo-Meguro"
+  ],
+  "江北": [
+    "Kohoku"
+  ],
+  "中目黒": [
+    "Nakano",
+    "Azabu",
+    "Meguro",
+    "Nakameguro"
+  ],
+  "関口": [
+    "Any area within Minato Ward if specified"
+  ],
+  "栄町": [
+    "栄町",
+    "Sakaecho",
+    "栄町 would have matched Chiyoda if the prediction was more in line with Sakumacho, an area in Chiyoda Ward."
+  ],
+  "和田": [
+    "Komazawa",
+    "Nakano Town"
+  ],
+  "成田西": [
+    "Futakotamagawa",
+    "Naritanishi",
+    "Mizue",
+    "A town or district within Setagaya, if identifiable",
+    "Komazawa or Komazawa Park"
+  ],
+  "三田": [
+    "Mita"
+  ],
+  "菊川": [
+    "Kikukawa"
+  ],
+  "青海": [
+    "Minato City",
+    "Ariake",
+    "Aomi"
+  ],
+  "大杉": [
+    "Todoroki",
+    "Osugi"
+  ],
+  "新宿": [
+    "Kinshi",
+    "Machiya"
+  ],
+  "志村": [
+    "Daikanyama",
+    "Shimura-Sakaue"
+  ],
+  "九段南": [
+    "Kudan-minami"
+  ],
+  "上十条": [
+    "Kamijūjō",
+    "Kamijujo",
+    "Not specified",
+    "Nakameguro"
+  ],
+  "市川市": [
+    "Setagaya",
+    "Adachi"
+  ],
+  "広尾": [
+    "Kitami",
+    "Hiroo"
+  ],
+  "長崎": [
+    "Nagasaki",
+    "長崎",
+    "Asagaya"
+  ],
+  "徳丸": [
+    "板橋区",
+    "Shimokitazawa would have matched with 下北沢",
+    "Tokumaru",
+    "Shibamata",
+    "Fujimidai",
+    "Kyodo"
+  ],
+  "千歳台": [
+    "千歳台",
+    "Chitosedai",
+    "Chitose-Dai"
+  ],
+  "下馬": [
+    "Ochiai",
+    "Shimouma",
+    "Shimokitazawa",
+    "Nogata Town",
+    "Machiya",
+    "Kyodo"
+  ],
+  "塩浜": [
+    "Shiohama"
+  ],
+  "蔵前": [
+    "蔵前",
+    "Kuramae"
+  ],
+  "加賀": [
+    "Kaga"
+  ],
+  "毛利": [
+    "Mouri"
+  ],
+  "要町": [
+    "Honmura",
+    "Kanamecho",
+    "Yayoicho"
+  ],
+  "麻布台": [
+    "Minato-ku, Toranomon",
+    "Azabu",
+    "Roppongi"
+  ],
+  "船堀": [
+    "Funabori",
+    "Shimokitazawa",
+    "Shiomi"
+  ],
+  "熊野町": [
+    "Ikebukuro"
+  ],
+  "市谷船河原町": [
+    "Takanawa"
+  ],
+  "お花茶屋": [
+    "Tokiwadai District",
+    "Ohanajaya"
+  ],
+  "墨田": [
+    "Sumida"
+  ],
+  "西落合": [
+    "Tamagawa",
+    "Nishi-Ochiai"
+  ],
+  "白鷺": [
+    "Shirasagi",
+    "Okura",
+    "白鷺",
+    "Kitami"
+  ],
+  "千住関屋町": [
+    "Senju Sekiyacho"
+  ],
+  "浜田山": [
+    "Hachimanyama",
+    "Sakura-Shinmachi",
+    "Kinuta"
+  ],
+  "小松川": [
+    "Toyo",
+    "Komatsugawa",
+    "Yaguchi should have been Komatsugawa.",
+    "Mukojima"
+  ],
+  "南久が原": [
+    "Minamikugahara",
+    "Minami-Kugahara",
+    "Tateishi"
+  ],
+  "天沼": [
+    "Ogikubo",
+    "Aoyama",
+    "Shimokitazawa"
+  ],
+  "千田": [
+    "Senda"
+  ],
+  "東日暮里": [
+    "Kiba should have matched with Higashi-Nippori",
+    "東日暮里",
+    "Higashi-Nippori"
+  ],
+  "富士見台": [
+    "富士見台",
+    "Close to Shakuji park"
+  ],
+  "皿沼": [
+    "Saranuma"
+  ],
+  "上野毛": [
+    "Kaminoge",
+    "Nakameguro"
+  ],
+  "旭丘": [
+    "旭丘"
+  ],
+  "南池袋": [
+    "Minami-Ikebukuro",
+    "Minami-Oikebukuro",
+    "池袋",
+    "Koishikawa",
+    "Zoshigaya"
+  ],
+  "東嶺町": [
+    "Higashiminechō"
+  ],
+  "一之江": [
+    "Tateishi",
+    "Ichinoe",
+    "新小岩"
+  ],
+  "赤羽台": [
+    "Akabane",
+    "Akabadai",
+    "Akabanedai"
+  ],
+  "湯島": [
+    "Aoyama",
+    "Yushima",
+    "Azabu"
+  ],
+  "千住旭町": [
+    "Senju Asahi-cho"
+  ],
+  "田柄": [
+    "Kitazawa",
+    "Kamiyama",
+    "Okamoto",
+    "田柄"
+  ],
+  "東尾久": [
+    "東尾久",
+    "Higashiogu"
+  ],
+  "南篠崎町": [
+    "Minami-Shinozakicho",
+    "南篠崎町",
+    "Minamishinozaki"
+  ],
+  "東麻布": [
+    "Akabane",
+    "Minato East Azabu",
+    "Azabudai"
+  ],
+  "北馬込": [
+    "Kitamagome",
+    "Kita-Magome"
+  ],
+  "中十条": [
+    "Nogata District in Nakano"
+  ],
+  "東保木間": [
+    "東保木間"
+  ],
+  "北新宿": [
+    "Kita-Shinjuku",
+    "Kitashinjuku",
+    "Shimokitazawa"
+  ],
+  "神宮前": [
+    "Jingumae",
+    "Jingumae or nearby parts of Shibuya Ward",
+    "Omotesando"
+  ],
+  "西浅草": [
+    "Hongo"
+  ],
+  "久が原": [
+    "Kamiyama",
+    "Kugahara",
+    "久が原"
+  ],
+  "宮坂": [
+    "Todokita, if accurate",
+    "Miyasaka",
+    "Shimokitazawa"
+  ],
+  "西馬込": [
+    "Nishimagome"
+  ],
+  "辰巳": [
+    "辰巳",
+    "Tatsumi",
+    "Shinonome",
+    "Nearby Tatsumi area",
+    "tatsumi",
+    "Toyosu"
+  ],
+  "上高井戸": [
+    "The neighboring town or district like 永福町"
+  ],
+  "東品川": [
+    "Tamachi",
+    "Shinagawa, Higashi-Shinagawa",
+    "Higashi-Shinagawa",
+    "Nishikasai"
+  ],
+  "王子": [
+    "Matsuei Town",
+    "Ouji",
+    "Oji",
+    "Predicted town would have matched with 王子 (Oji)",
+    "Mukojima"
+  ],
+  "清川": [
+    "Kiyokawa",
+    "Oshiage"
+  ],
+  "北町": [
+    "Hikarigaoka",
+    "Kasai",
+    "Kitamachi"
+  ],
+  "足立": [
+    "Adachi"
+  ],
+  "千住橋戸町": [
+    "Senju Hashidocho",
+    "Shiomi if 千住橋戸町 matched Shiomi"
+  ],
+  "六本木": [
+    "Roppongi"
+  ],
+  "元浅草": [
+    "Koishikawa"
+  ],
+  "上北沢": [
+    "Chitose Funabashi",
+    "Kamikitazawa"
+  ],
+  "小台": [
+    "Oodai",
+    "Kasai",
+    "Odai"
+  ],
+  "東新橋": [
+    "Shiodome",
+    "Akasaka"
+  ],
+  "南六郷": [
+    "Minami-Rokugō",
+    "Minami Rokugo"
+  ],
+  "西が丘": [
+    "Nishigaoka"
+  ],
+  "歌舞伎町": [
+    "Kabukicho"
+  ],
+  "中央本町": [
+    "Chūō Honmachi"
+  ],
+  "深沢": [
+    "Aobadai or a nearby area",
+    "Fukazawa",
+    "Fukasawa",
+    "Mishuku",
+    "Sakura-shinmachi"
+  ],
+  "大井": [
+    "Oi",
+    "Shimokitazawa"
+  ],
+  "保木間": [
+    "Hokima"
+  ],
+  "扇": [
+    "Ohgi",
+    "Ōgi",
+    "Ougi",
+    "Ogi",
+    "Shinozaki"
+  ],
+  "赤堤": [
+    "possibly near Shimokitazawa or a similar residential district",
+    "北沢"
+  ],
+  "蒲田": [
+    "Ikebukuro (池袋)",
+    "Kamata",
+    "蒲田"
+  ],
+  "石神井台": [
+    "Shakujidai"
+  ],
+  "中央": [
+    "Chūō",
+    "Chūō (Ōta)",
+    "Chuo"
+  ],
+  "元赤坂": [
+    "Akasaka",
+    "元赤坂"
+  ],
+  "神田小川町": [
+    "Kanda-Ogawamachi",
+    "Kanda Ogawamachi"
+  ],
+  "駒場": [
+    "Komaba",
+    "Azabu"
+  ],
+  "亀有": [
+    "Ogikubo",
+    "Mejiro",
+    "亀有"
+  ],
+  "志茂": [
+    "Shimo",
+    "Ebara"
+  ],
+  "恵比寿": [
+    "Ebisu"
+  ],
+  "光が丘": [
+    "Futako-Tamagawa"
+  ],
+  "東池袋": [
+    "Shiba",
+    "Toranomon",
+    "Higashi-Ikebukuro"
+  ],
+  "大原": [
+    "Hikarigaoka",
+    "Ōhara"
+  ],
+  "弥生": [
+    "Hakusan",
+    "Hiroo"
+  ],
+  "築地": [
+    "Okubo",
+    "Tsukiji"
+  ],
+  "鹿浜": [
+    "Shikahama",
+    "Tamagawa",
+    "Minamisuna in Koto",
+    "Kahama"
+  ],
+  "青戸": [
+    "Arakawa 区, Nippori",
+    "青戸",
+    "Koiwa",
+    "Shibamata",
+    "Aoto"
+  ],
+  "丸の内": [
+    "Marunouchi",
+    "Toranomon"
+  ],
+  "氷川台": [
+    "Hikawadai",
+    "Kanamachi",
+    "Hikawa-daicho"
+  ],
+  "松庵": [
+    "松庵"
+  ],
+  "銀座": [
+    "Ginza"
+  ],
+  "北青山": [
+    "Kita-Aoyama",
+    "Kitaaoyama"
+  ],
+  "夢の島": [
+    "Komazawa",
+    "Yumenoshima",
+    "夢の島"
+  ],
+  "大森東": [
+    "Omori-Higashi",
+    "Toshimaen vicinity is predicted, but actual is Omori Higashi.",
+    "Shimokitazawa",
+    "Ōmori Higashi"
+  ],
+  "八広": [
+    "Yahiro",
+    "Shinozaki"
+  ],
+  "住吉": [
+    "Sumiyoshi"
+  ],
+  "平塚": [
+    "Hiratsuka"
+  ],
+  "市谷台町": [
+    "Ichigaya Daimachi"
+  ],
+  "上馬": [
+    "Koiwa was input, should've matched Kamiuma.",
+    "上馬"
+  ],
+  "海岸": [
+    "Shibaura (芝浦)",
+    "Kaigan"
+  ],
+  "世田谷": [
+    "Setagaya",
+    "Shimokitazawa",
+    "Setagaya (town/further precision needed)"
+  ],
+  "羽田空港": [
+    "Nearby Haneda Airport",
+    "Haneda"
+  ],
+  "西尾久": [
+    "Nishiogu",
+    "Nishi-Ogu",
+    "西尾久"
+  ],
+  "南大塚": [
+    "Minami-Otsuka",
+    "Ikebukuro"
+  ],
+  "東砂": [
+    "Higashi-Suna",
+    "東砂",
+    "Toysuna"
+  ],
+  "町屋": [
+    "Machiya",
+    "町屋"
+  ],
+  "東中野": [
+    "Higashi-Nakano",
+    "東中野"
+  ],
+  "平和島": [
+    "Heiwajima"
+  ],
+  "西嶺町": [
+    "Nishimine-cho"
+  ],
+  "蓮根": [
+    "Toyosu",
+    "Arai",
+    "蓮根"
+  ],
+  "平野": [
+    "Hirano"
+  ],
+  "大蔵": [
+    "Ogikubo",
+    "Okura"
+  ],
+  "松島": [
+    "Narimasu",
+    "Hongo (本郷)",
+    "Edogawa-Matsushima"
+  ],
+  "砧": [
+    "Komazawa",
+    "Shimokitazawa",
+    "Kinuta"
+  ],
+  "今川": [
+    "今川",
+    "Imagawa"
+  ],
+  "綾瀬": [
+    "Minami-Senju",
+    "Ayase"
+  ],
+  "立花": [
+    "Nippori",
+    "Tachibana",
+    "立花"
+  ],
+  "勝島": [
+    "田町",
+    "Toyocho",
+    "勝島"
+  ],
+  "六月": [
+    "Rokugatsu"
+  ],
+  "池尻": [
+    "Konan",
+    "Shimokitazawa"
+  ],
+  "北品川": [
+    "Kitashinagawa",
+    "Kita-Shinagawa"
+  ],
+  "梅里": [
+    "Waseda",
+    "Araiyama District"
+  ],
+  "根岸": [
+    "Negishi"
+  ],
+  "元麻布": [
+    "Sangenjaya",
+    "Moto-Azabu",
+    "Azabu",
+    "Roppongi"
+  ],
+  "宮本町": [
+    "宮本町 does not directly correspond to Nezu, would need clarification on what it could align with"
+  ],
+  "南品川": [
+    "Sangenjaya",
+    "Minamishinagawa",
+    "Nakameguro"
+  ],
+  "岡本": [
+    "Kaminoge",
+    "Kitami",
+    "Okamoto"
+  ],
+  "白山": [
+    "Hakusan",
+    "Roppongi"
+  ],
+  "二之江町": [
+    "Ninoechō"
+  ],
+  "阿佐谷北": [
+    "'Not specified' town could have aimed for '阿佐谷北' (Asagaya Kita), which should have specified the northern area of Asagaya in Suginami Ward.",
+    "阿佐谷北",
+    "Asagaya-kita"
+  ],
+  "稲荷台": [
+    "Inaridai"
+  ],
+  "上板橋": [
+    "上板橋"
+  ],
+  "虎ノ門": [
+    "Toranomon"
+  ],
+  "西大井": [
+    "西大井",
+    "Nishi-Oi",
+    "Shimokitazawa"
+  ],
+  "江古田": [
+    "江古田",
+    "Kannana area",
+    "Ekoda"
+  ],
+  "北嶺町": [
+    "Kitadatecho",
+    "Kitahara"
+  ],
+  "大森西": [
+    "Ōmori",
+    "Omori-Nishi"
+  ],
+  "千石": [
+    "Azabu (town)",
+    "Kasai",
+    "Sengoku"
+  ],
+  "飯田橋": [
+    "Shiodome"
+  ],
+  "青葉台": [
+    "Aoyama"
+  ],
+  "野方": [
+    "野方",
+    "Ikebukuro",
+    "Ōimachi"
+  ],
+  "田園調布本町": [
+    "Denenchofu"
+  ],
+  "永代": [
+    "Eitai"
+  ],
+  "高田": [
+    "Takada"
+  ],
+  "勝どき": [
+    "Kachidoki",
+    "Roppongi"
+  ],
+  "亀沢": [
+    "亀沢"
+  ],
+  "新小川町": [
+    "Shin-Ogawa-cho",
+    "Roppongi"
+  ],
+  "羽田": [
+    "Tateishi",
+    "Haneda"
+  ],
+  "本羽田": [
+    "Honhaneda",
+    "Haneda"
+  ],
+  "中根": [
+    "中根",
+    "Okubo"
+  ],
+  "牡丹": [
+    "Botan",
+    "牡丹"
+  ],
+  "中台": [
+    "Nakadai",
+    "中台 (Nakadai Town)"
+  ],
+  "日本橋箱崎町": [
+    "Nihonbashi-Hakozaki-cho"
+  ],
+  "余丁町": [
+    "Yochomachi"
+  ],
+  "東五反田": [
+    "Gotanda",
+    "Azabu"
+  ],
+  "南蒲田": [
+    "南蒲田"
+  ],
+  "新橋": [
+    "Toranomon",
+    "Shimbashi"
+  ],
+  "東四つ木": [
+    "Ayase would match 東四つ木 if it were 東四つ木",
+    "東四つ木",
+    "Shinozaki is far from 東四つ木. A correct match would be 東四つ木."
+  ],
+  "西荻北": [
+    "下北沢"
+  ],
+  "向島": [
+    "Azabu",
+    "Ueno"
+  ],
+  "豊海町": [
+    "Toyomi Town"
+  ],
+  "西巣鴨": [
+    "西巣鴨",
+    "Nishi-Sugamo"
+  ],
+  "大谷口上町": [
+    "Otaniguchi Kamicho"
+  ],
+  "仲池上": [
+    "Senju",
+    "Nakikegami",
+    "Naka-Ikegami"
+  ],
+  "興野": [
+    "Kōya",
+    "Toneri"
+  ],
+  "西荻南": [
+    "Nishi-Ogikubo Minami",
+    "Nishiogi Minami",
+    "Shimo-kitazawa"
+  ],
+  "高松": [
+    "Takamatsu",
+    "Shimokitazawa",
+    "Oguchi"
+  ],
+  "東矢口": [
+    "Higashiyaguchi"
+  ],
+  "新小岩": [
+    "Shinkoiwa",
+    "Tokyo Skytree Area",
+    "Takadanobaba",
+    "Shin-Koiwa"
+  ],
+  "本郷": [
+    "本郷",
+    "Hongo"
+  ],
+  "江東橋": [
+    "Koto-bashi",
+    "Kotobashi"
+  ],
+  "練馬": [
+    "練馬"
+  ],
+  "駒込": [
+    "Komagome"
+  ],
+  "荒木町": [
+    "Arakicho"
+  ],
+  "沼袋": [
+    "Numabukuro",
+    "沼袋"
+  ],
+  "押上": [
+    "Oshiage",
+    "Mukojima"
+  ],
+  "京島": [
+    "Minamisenju",
+    "Oshiage",
+    "Kyojima"
+  ],
+  "南常盤台": [
+    "Minami-Tokiwadai"
+  ],
+  "加平": [
+    "Kahira"
+  ],
+  "旗の台": [
+    "Hatagaya",
+    "Hatanodai"
+  ],
+  "碑文谷": [
+    "碑文谷",
+    "Eifuku",
+    "Himonya"
+  ],
+  "玉堤": [
+    "Tamazutsumi"
+  ],
+  "内幸町": [
+    "Marunouchi"
+  ],
+  "南": [
+    "南",
+    "Minami"
+  ],
+  "弥生町": [
+    "Akabane would have matched better with 赤羽, a district within Kita Ward.",
+    "弥生町",
+    "Yayoi"
+  ],
+  "池上": [
+    "Hikarigaoka",
+    "Ikegami (town)",
+    "Ikegami"
+  ],
+  "佐賀": [
+    "Saga"
+  ],
+  "池袋": [
+    "Ikebukuro"
+  ],
+  "若洲": [
+    "Shinkiba",
+    "Wakasu"
+  ],
+  "宮城": [
+    "Miyagi"
+  ],
+  "千住緑町": [
+    "Senju Midori-machi"
+  ],
+  "西竹の塚": [
+    "Nishitakenotsuka",
+    "Takenotsuka"
+  ],
+  "二子": [
+    "二子",
+    "Futako"
+  ],
+  "西伊興": [
+    "西伊興"
+  ],
+  "東田端": [
+    "Higashi-tabata"
+  ],
+  "富久町": [
+    "Tomihisa-cho"
+  ],
+  "桐ケ丘": [
+    "桐ケ丘",
+    "Takenotsuka"
+  ],
+  "仲宿": [
+    "Nakajuku",
+    "Nakacho"
+  ],
+  "百人町": [
+    "Hyakunincho"
+  ],
+  "西一之江": [
+    "Nishiichinoe",
+    "Nishiichinoue"
+  ],
+  "日本橋": [
+    "Nihonbashi"
+  ],
+  "石原": [
+    "Ishiwara",
+    "Asagayakita"
+  ],
+  "豪徳寺": [
+    "Gotokuji"
+  ],
+  "新大橋": [
+    "Shin-Ohashi"
+  ],
+  "西新井本町": [
+    "N/A",
+    "Nishiarai"
+  ],
+  "赤坂": [
+    "Roppongi"
+  ],
+  "岸町": [
+    "Senju"
+  ],
+  "松ノ木": [
+    "Matsunoki",
+    "Nakaitabashi"
+  ],
+  "東小岩": [
+    "Higashi-Koiwa",
+    "Asagaya"
+  ],
+  "西麻布": [
+    "Akasaka",
+    "Nishi-Azabu"
+  ],
+  "八幡山": [
+    "Hachimanyama",
+    "Kyodo"
+  ],
+  "東新小岩": [
+    "Higashi-Shinkoiwa",
+    "Tateishi",
+    "新小岩"
+  ],
+  "春江町": [
+    "Harue-cho"
+  ],
+  "東中延": [
+    "Higashinakanobu",
+    "Higashi-Nakanobu",
+    "Kinshicho"
+  ],
+  "谷中": [
+    "Yanaka"
+  ],
+  "桜川": [
+    "桜川"
+  ],
+  "善福寺": [
+    "Zenpukuji",
+    "Nishi-Zenpukuji"
+  ],
+  "北沢": [
+    "Shimokitazawa"
+  ],
+  "舟渡": [
+    "Funado"
+  ],
+  "臨海町": [
+    "Rinkai",
+    "Rinkai-cho"
+  ],
+  "高井戸西": [
+    "Gōtokuji"
+  ],
+  "三番町": [
+    "Sanbancho",
+    "Shinjuku or Nishi-Shinjuku"
+  ],
+  "目黒": [
+    "Meguro",
+    "Roppongi"
+  ],
+  "大岡山": [
+    "Ogikubo",
+    "Meidaimae or similar (closer neighborhood to 大岡山)"
+  ],
+  "八雲": [
+    "Yakumo",
+    "Shimokitazawa"
+  ],
+  "東が丘": [
+    "東が丘"
+  ],
+  "東雲": [
+    "芝浦",
+    "Shinkamata",
+    "Haneda"
+  ],
+  "京浜島": [
+    "蒲田"
+  ],
+  "小日向": [
+    "Kohinata"
+  ],
+  "桜台": [
+    "Nerima Sakuradai",
+    "桜台"
+  ],
+  "元代々木町": [
+    "Roppongi"
+  ],
+  "東領家": [
+    "Higashi-Ryoge",
+    "Kinshi Town",
+    "null"
+  ],
+  "中町": [
+    "Nakacho"
+  ],
+  "桃井": [
+    "Tamagawa (for Town)"
+  ],
+  "西六郷": [
+    "Shimokitazawa"
+  ],
+  "小山": [
+    "Koyama"
+  ],
+  "東蒲田": [
+    "Higashi-Kamata"
+  ],
+  "仲町": [
+    "Nakacho"
+  ],
+  "北糀谷": [
+    "Kita Kōjiya"
+  ],
+  "野毛": [
+    "Nogata",
+    "Nogesawa"
+  ],
+  "代官山町": [
+    "Daikanyama"
+  ],
+  "文花": [
+    "Bunka"
+  ],
+  "羽沢": [
+    "Kichijoji town is part of 武蔵野市 (Musashino City), thus has no direct match with 羽沢, which is in Nerima Ward.",
+    "羽沢"
+  ],
+  "戸山": [
+    "Shirokanedai"
+  ],
+  "南花畑": [
+    "Minami-hanahata",
+    "Minamihanabata"
+  ],
+  "東瑞江": [
+    "Higashimizue",
+    "Higashi-Mizue"
+  ],
+  "柳原": [
+    "Yanagihara"
+  ],
+  "清新町": [
+    "Shinozaki Town",
+    "Seishincho",
+    "Oshiage"
+  ],
+  "巣鴨": [
+    "Sugamo",
+    "Kinshi (錦糸)"
+  ],
+  "浮間": [
+    "Toyo",
+    "Ukima"
+  ],
+  "扇橋": [
+    "両国"
+  ],
+  "日本橋人形町": [
+    "Ryogoku"
+  ],
+  "西新井栄町": [
+    "Nishiarai Sakacho"
+  ],
+  "豊玉中": [
+    "Toyotama-naka",
+    "Toyotamanaka",
+    "豊玉中"
+  ],
+  "新田": [
+    "Shinden",
+    "Nitta"
+  ],
+  "大崎": [
+    "Osaki"
+  ],
+  "新川": [
+    "Yotsuya Town",
+    "Shinkawa"
+  ],
+  "北上野": [
+    "Matsugaya Neighborhood"
+  ],
+  "中馬込": [
+    "Denenchofu"
+  ],
+  "日比谷公園": [
+    "Hibiya Park"
+  ],
+  "北烏山": [
+    "Kita Karasuyama",
+    "Kitakarasuyama",
+    "北沢"
+  ],
+  "鷹番": [
+    "鷹番"
+  ],
+  "東向島": [
+    "Ikebukuro"
+  ],
+  "白金台": [
+    "Shirokane",
+    "白金台"
+  ],
+  "池之端": [
+    "Kiba",
+    "Any town within Meguro区"
+  ],
+  "若木": [
+    "Wakagi",
+    "若木"
+  ],
+  "恵比寿西": [
+    "Moto-Azabu"
+  ],
+  "昭和町": [
+    "Kinshicho"
+  ],
+  "坂下": [
+    "Ryogoku",
+    "Kinuta"
+  ],
+  "松が谷": [
+    "Matsugaya"
+  ],
+  "若林": [
+    "Setagaya, Wakabayashi"
+  ],
+  "豊町": [
+    "豊町",
+    "Toyincho"
+  ],
+  "富岡": [
+    "Tomioka"
+  ],
+  "芝": [
+    "Minato"
+  ],
+  "上目黒": [
+    "Kamimeguro"
+  ],
+  "皇居外苑": [
+    "Kōkyo-gaien"
+  ],
+  "北千束": [
+    "Kitachenzoku"
+  ],
+  "大山西町": [
+    "大山西町",
+    "Oyam Nishicho"
+  ],
+  "岩淵町": [
+    "Iwabuchimachi"
+  ],
+  "蒲田本町": [
+    "Kamata"
+  ],
+  "宝町": [
+    "Kasai",
+    "Kitazawa"
+  ],
+  "中落合": [
+    "Nakaochiai"
+  ],
+  "北葛西": [
+    "Kita Kasai"
+  ],
+  "一ツ家": [
+    "Hitotsuya"
+  ],
+  "清水町": [
+    "Itabashi Station vicinity"
+  ],
+  "紀尾井町": [
+    "Kioicho"
+  ],
+  "大山金井町": [
+    "大山金井町",
+    "Minamisenju"
+  ],
+  "市谷薬王寺町": [
+    "Kinshicho or neighboring areas in Sumida"
+  ],
+  "冬木": [
+    "Fuyuki"
+  ],
+  "鶯谷町": [
+    "Uguisudani-cho"
+  ],
+  "赤羽": [
+    "Akabane"
+  ],
+  "浅草橋": [
+    "Asakusabashi"
+  ],
+  "粕谷": [
+    "Kaminoge"
+  ],
+  "四葉": [
+    "四葉"
+  ],
+  "昭和島": [
+    "Showajima"
+  ],
+  "北加平町": [
+    "Kita-Kanamecho"
+  ],
+  "西新橋": [
+    "Nishi-Shimbashi",
+    "Minato-ku"
+  ],
+  "白鳥": [
+    "Hiroo"
+  ],
+  "洗足": [
+    "Senzoku"
+  ],
+  "豊玉北": [
+    "Itabashi North",
+    "Toyotamakita"
+  ],
+  "西綾瀬": [
+    "Nishiarai"
+  ],
+  "向山": [
+    "Mukouyama"
+  ],
+  "高野台": [
+    "Asagaya",
+    "Fukasawa"
+  ],
+  "吾妻橋": [
+    "Kanda"
+  ],
+  "大森南": [
+    "Omori Minami"
+  ],
+  "市谷左内町": [
+    "Azabu"
+  ],
+  "東十条": [
+    "Mishuku Town"
+  ],
+  "入船": [
+    "Irifuné"
+  ],
+  "上一色": [
+    "Kamiisshiki"
+  ],
+  "佃": [
+    "佃"
+  ],
+  "川崎市幸区": [
+    "Edogawa Ward"
+  ],
+  "小向仲野町": [
+    "Edogawa"
+  ],
+  "赤塚新町": [
+    "赤塚"
+  ],
+  "王子本町": [
+    "Ojihoncho"
+  ],
+  "新砂": [
+    "Koto Ward, Toyosu"
+  ],
+  "千歳": [
+    "Shibaura"
+  ],
+  "四谷坂町": [
+    "Yotsuya"
+  ],
+  "信濃町": [
+    "Shinanomachi"
+  ],
+  "宇喜田町": [
+    "Ukita"
+  ],
+  "宇田川町": [
+    "Udagawacho"
+  ],
+  "松本": [
+    "Matsumoto"
+  ],
+  "新堀": [
+    "Niibori"
+  ],
+  "羽田旭町": [
+    "Haneda"
+  ],
+  "水道": [
+    "水道"
+  ],
+  "千鳥": [
+    "Nakameguro Town"
+  ],
+  "緑": [
+    "Hatagaya"
+  ],
+  "池袋本町": [
+    "Ikebukuro"
+  ],
+  "二番町": [
+    "Roppongi"
+  ],
+  "緑が丘": [
+    "Midorigaoka"
+  ],
+  "北の丸公園": [
+    "Shinjuku area"
+  ],
+  "千住元町": [
+    "Senju-motomachi"
+  ],
+  "業平": [
+    "業平 (Narihirabashi)"
+  ],
+  "榎町": [
+    "Okubo"
+  ],
+  "本木西町": [
+    "Motoki Nishimachi"
+  ],
+  "十条台": [
+    "Kasai"
+  ],
+  "向原": [
+    "Mukaihara"
+  ],
+  "大久保": [
+    "Okubo"
+  ],
+  "東松本": [
+    "Kanamachi"
+  ],
+  "戸越": [
+    "Togoshi"
+  ],
+  "南元町": [
+    "Minami-Motomachi"
+  ],
+  "神田須田町": [
+    "Kanda Sudachō"
+  ],
+  "富士見": [
+    "Sangenjaya"
+  ],
+  "上篠崎": [
+    "Kamishinozaki"
+  ],
+  "平町": [
+    "Hiramachi"
+  ],
+  "北山伏町": [
+    "Kitayama Bushimachi"
+  ],
+  "千住東": [
+    "Southeast Senju"
+  ]
+}
